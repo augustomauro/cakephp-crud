@@ -71,6 +71,6 @@ Tambien en Database deberia estar en verde, pero aun falta conectar a la base de
     c) Crear nuevo articulo (template\Articulos\add.php):
     Presionar el boton New Articulo (Veremos un formulario para creacion de un articulo)
 
-    d) Luego de crear un articulo, al vovler a index podremos visualizarlo, editarlo, eliminarlo o crear mas articulos.
+    d) Luego de crear un articulo, al volver a index podremos visualizarlo, editarlo, eliminarlo o crear mas articulos.
 
 ---
