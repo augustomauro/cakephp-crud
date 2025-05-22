@@ -1,25 +1,25 @@
-### Creacion CRUD basico con Cake PHP
+# Creacion CRUD basico con Cake PHP
 
 Ref: https://book.cakephp.org/
 
-# 1) Crear una nueva base de datos a traves de mysql
+### 1) Crear una nueva base de datos a traves de mysql
 
     CREATE DATABASE cakephp-crud_db;
 
-# 2) Crear una nueva aplicacion en la carpeta:
+### 2) Crear una nueva aplicacion en la carpeta:
 
     composer create-project --prefer-dist cakephp/app:~5.0 cakephp
 
-# 3) Inciar la aplicacion en consola CMD dentro de carpeta de la aplicacion:
+### 3) Inciar la aplicacion en consola CMD dentro de carpeta de la aplicacion:
 
     bin\cake server
 
     Nota: deberia quedar funcionando en la url: http://localhost:8765/
 
-# 4) Verificar que tanto lo que se encuentra en Environment como Filesystem se encuentre en verde, sino deben resolverse dichos errores.
+### 4) Verificar que tanto lo que se encuentra en Environment como Filesystem se encuentre en verde, sino deben resolverse dichos errores.
 Tambien en Database deberia estar en verde, pero aun falta conectar a la base de datos creada.
 
-# 5) Conectar con la base de datos creada en config\app_local.php:
+### 5) Conectar con la base de datos creada en config\app_local.php:
 
     'Datasources' => [
         'default' => [
@@ -38,17 +38,17 @@ Tambien en Database deberia estar en verde, pero aun falta conectar a la base de
             ...
             ...
 
-# 6) Crear migracion (tabla) inicial para CRUD:
+### 6) Crear migracion (tabla) inicial para CRUD:
 
     bin/cake bake migration CreateArticulos nombre:string texto:string created modified
 
     Nota: esto creara una migracion en config\Migrations con las siguientes columnas: nombre,texto,created,modified
 
-# 7) Correr migracion:
+### 7) Correr migracion:
 
     bin/cake migrations migrate
 
-# 8) Creacion CRUD final:
+### 8) Creacion CRUD final:
 
     bin/cake bake all articulos
 
@@ -62,7 +62,7 @@ Tambien en Database deberia estar en verde, pero aun falta conectar a la base de
     src\Model\Entity\Articulo.php
     src\Model\Table\ArticulosTable.php
 
-# 9) Test finales:
+### 9) Test finales:
 
     a) Verificar que abra la ruta http://localhost:8765/articulos/
 
